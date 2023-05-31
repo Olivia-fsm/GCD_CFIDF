@@ -455,7 +455,7 @@ def draw_stats(stats_treg, trg_cell, nbs, cutoff = 0.2, fig_dir=None):
     atrs = nx.get_edge_attributes(g1, 'weight')    
     for e0,e1 in g1.edges():
         p = atrs[e0,e1]
-        plt.plot([pos[e0][0],pos[e1][0]],[pos[e0][1],pos[e1][1]], c= 'black',alpha = np.clip(a=1-10*p, a_min=0.001, a_max=1.0),linewidth = np.clip(a=8-80*p, a_min=0.001, a_max=1.0))
+        plt.plot([pos[e0][0],pos[e1][0]],[pos[e0][1],pos[e1][1]], c= 'black',alpha = np.clip(a=1-10*p, a_min=0.001, a_max=1.0),linewidth = np.clip(a=8-80*p, a_min=0.001, a_max=8.0))
         plt.text(0.5*(pos[e0][0]+pos[e1][0]),0.5*(pos[e0][1]+pos[e1][1]), 'p = %.3f'%p)
         
     plt.axis('off')
@@ -470,7 +470,7 @@ def draw_stats(stats_treg, trg_cell, nbs, cutoff = 0.2, fig_dir=None):
     atrs = nx.get_edge_attributes(g2, 'weight')    
     for e0,e1 in g2.edges():
         p = atrs[e0,e1]
-        plt.plot([pos[e0][0],pos[e1][0]],[pos[e0][1],pos[e1][1]], c= 'black',alpha = np.clip(a=1-10*p, a_min=0.001, a_max=1.0),linewidth = np.clip(a=8-80*p, a_min=0.001, a_max=1.0))
+        plt.plot([pos[e0][0],pos[e1][0]],[pos[e0][1],pos[e1][1]], c= 'black',alpha = np.clip(a=1-10*p, a_min=0.001, a_max=1.0),linewidth = np.clip(a=8-80*p, a_min=0.001, a_max=8.0))
         # plt.plot([pos[e0][0],pos[e1][0]],[pos[e0][1],pos[e1][1]], c= 'black',alpha = 1-5*p,linewidth = 15-75*p)
         plt.text(0.5*(pos[e0][0]+pos[e1][0]),0.5*(pos[e0][1]+pos[e1][1]), 'p = %.3f'%p)
     #plt.ylim(-100,350)
@@ -478,10 +478,10 @@ def draw_stats(stats_treg, trg_cell, nbs, cutoff = 0.2, fig_dir=None):
     plt.title(f'T2D', fontsize=20)
 
     plt.suptitle(f'{trg_cell}-cell Inter-CN Interaction', fontsize=25)
-    save_dir = os.path.join(fig_dir, 'cca-analysis')
-    if not os.path.exists(save_dir):
-        os.makedirs(save_dir)
-    plt.savefig(os.path.join(save_dir, f'nterCN-{trg_cell}.png'))
+    # save_dir = os.path.join(fig_dir, 'cca-analysis')
+    if not os.path.exists(fig_dir):
+        os.makedirs(fig_dir)
+    plt.savefig(os.path.join(fig_dir, f"nterCN-{trg_cell.replace(' ', '-')}.png"))
     return g1,g2
 
 def cca_analysis(islet_info, test_trg_cells:list, n_cluster=6, 
