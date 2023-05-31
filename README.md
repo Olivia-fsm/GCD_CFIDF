@@ -17,9 +17,10 @@ You will find all the analysis figures (sample graph community plots, cell neigh
 ## Analysis Results (num_cluster=6; resolution=0.5)
 
 ### Graph Community Partition
-
+<img width="200" src="figs/ABHQ115-2.png" />
 ### Enrichment analysis
-
+<img width="200" src="figs/enrichment_k=6_r=0.5.png" />
 ### T2D-ND Enrichment Difference
-
+<img width="200" src="figs/T2D-ND-enrich_diff.png" />
 ### Sample CCA analysis
+<img width="200" src="figs/cca-analysis/cca-analysis/nterCN-Pericyte.png" />
