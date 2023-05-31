@@ -3,11 +3,13 @@ Graph-based enrichment analysis algorithm for paper 'RFX6-mediated dysregulation
 
 
 ## Run Graph Community Detection using louvian algorithm
-```bash scripts/gcd.sh
+```
+bash scripts/gcd.sh
 ```
 
 ## Run Enrichment Analysis with CFIDF metrics
-```bash scripts/run.sh
+```
+bash scripts/run.sh
 ```
 You will find all the analysis figures (sample graph community plots, cell neighborhood enrichment heatmap, T2D-ND enrichment difference heatmap by celltype, celltype CCA analysis graph plots) in the 'fig_dir' directory as you defined :)
 
