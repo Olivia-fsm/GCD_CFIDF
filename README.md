@@ -26,4 +26,4 @@ You will find all the analysis figures (sample graph community plots, cell neigh
 <img width="600" src="figs/T2D-ND-enrich_diff.png" />
 
 ### Sample CCA analysis
-<img width="600" src="figs/cca-analysis/cca-analysis/nterCN-T-cell.png" />
+<img width="600" src="figs/cca-analysis/nterCN-T-cell.png" />
